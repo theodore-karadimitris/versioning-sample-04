@@ -1,0 +1,26 @@
+mode: ContinuousDeployment
+assembly-versioning-scheme: MajorMinorPatch
+assembly-file-versioning-scheme: MajorMinorPatch
+commit-message-incrementing: Enabled
+branches:
+  develop:
+    regex: ^develop$
+    mode: ContinuousDeployment
+    increment: Inherit
+    track-merge-target: true
+    tracks-release-branches: true
+    prevent-increment-of-merged-branch-version: false
+  main:
+    regex: ^main|master$
+    mode: ContinuousDelivery
+    increment: Patch
+    prevent-increment-of-merged-branch-version: true
+  feature:
+    regex: ^feature?[/-]
+    mode: ContinuousDeployment
+    increment: Inherit
+    source-branches:
+      - develop
+ignore:
+  sha: []
+merge-message-formats: {}
