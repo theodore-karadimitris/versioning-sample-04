@@ -5,3 +5,4 @@ Console.WriteLine("Feature 02");
 Console.WriteLine("Feature 03 Breaking");
 Console.WriteLine("Feature 04");
 Console.WriteLine("Feature 05 Breaking");
+Console.WriteLine("Feature 06: Introducing breaking changes!");
