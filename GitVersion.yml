@@ -9,12 +9,10 @@ branches:
     increment: Inherit
     track-merge-target: true
     tracks-release-branches: true
-    prevent-increment-of-merged-branch-version: false
   main:
     regex: ^main|master$
     mode: ContinuousDelivery
     increment: Patch
-    prevent-increment-of-merged-branch-version: true
   feature:
     regex: ^feature?[/-]
     mode: ContinuousDeployment
